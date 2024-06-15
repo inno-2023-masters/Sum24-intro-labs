@@ -14,27 +14,27 @@ By requiring signed commits, project leaders can make sure that only approved co
 ### Merge strategies
 
 #### Standard merge
-Merges all commits from the feature branch into the base branch with a merge commit.
+Merges all commits from the feature branch into the base branch with a merge commit.<br>
 **Pros:**
 - Maintains complete commit history and context.
-- Clearly shows when features are merged.
+- Clearly shows when features are merged.<br>
 **Cons:**
 - Can create a messy commit history.
 
 #### Squash and merge
-Squashes all feature branch commits into a single commit before merging.
+Squashes all feature branch commits into a single commit before merging.<br>
 **Pros:**
 - Simplifies commit history.
-- Easier to track features.
+- Easier to track features.<br>
 **Cons:**
 - Loses individual commit details.
 - Can cause recurring conflicts if branch is reused.
 
 #### Rebase and merge
-Rebases feature branch commits onto the base branch individually, maintaining a linear history.
+Rebases feature branch commits onto the base branch individually, maintaining a linear history.<br>
 **Pros:**
 - Keeps history clean and linear.
-- Retains individual commit details.
+- Retains individual commit details.<br>
 **Cons:**
 - Requires manual conflict resolution and careful force pushing.
 - Commits lose original signatures.
