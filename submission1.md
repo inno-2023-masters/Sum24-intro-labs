@@ -14,6 +14,9 @@ Signature verification for bots is essential for maintaining the integrity of au
 ### Standard Merge
 **Pros**: Saves the complete commit history, including the context of branch merges. This helps you keep track of changes and understand why and when they were made. Simplifies conflict resolution, as changes from different branches are clearly separated.
 **Cons**: The commit history can become cluttered due to the multitude of merge commits. This can make it difficult to read the history of changes and make it more difficult to understand the sequence of updates.
+
+Standard Merge is often preferred because it simplifies conflict resolution. When multiple developers work on different features, conflicts are inescapable. Merge commits clearly separate changes from different branches, making it easier to identify and resolve conflicts without losing track of individual contributions.
+
 ### Squash and Merge
 **Pros**: Creates a clean commit history by combining all changes from a branch into a single commit. This makes it easier to manage the history and roll back changes, since all changes are in one commit.
 **Cons**: Loss of detailed history of individual commits from the branch. This can make debugging difficult, as the context and sequence of changes are lost.
