@@ -16,4 +16,48 @@ The use of signed contributions builds trust between team members and external c
 
 In summary, signing contributions using SSH keys has numerous advantages, including verifying the integrity and validity of code modifications, encouraging accountability, improving security, and fostering trust among contributors. By implementing commit signing standards, development teams can protect their projects from numerous risks while maintaining a high level of code quality.
 
-### solved task 1
+# Comparison of Git Merge Strategies
+
+## 1. Standard Merge
+
+**Description**: Combines two branches by creating a merge commit.
+
+**Pros**:
+- Preserves full commit history.
+- Provides clear context for merges.
+- Records conflict resolution.
+
+**Cons**:
+- Can lead to complex commit history.
+- Potential for cluttered history with many merge commits.
+
+## 2. Squash and Merge
+
+**Description**: Combines all commits from a feature branch into a single commit before merging.
+
+**Pros**:
+- Produces a clean, linear commit history.
+- Each merge results in a single, focused commit.
+
+**Cons**:
+- Loses detailed history of individual commits.
+- Conflict resolution context is not preserved.
+
+## 3. Rebase and Merge
+
+**Description**: Reapplies commits from a feature branch onto the base branch.
+
+**Pros**:
+- Results in a linear commit history.
+- Keeps commit history focused on features.
+
+**Cons**:
+- Conflict resolution is complex and time-consuming.
+- Potential for errors if not done carefully.
+- Loses original context of branch structure.
+
+## Why Standard Merge is Preferred in Collaborative Environments
+
+The standard merge technique is frequently used because it keeps a complete and detailed history of the project, gives clear context for merges, and preserves the dispute resolution process. These advantages make it easier for teams to comprehend the development process, debug problems, and cooperate efficiently.
+
+
