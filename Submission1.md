@@ -15,3 +15,5 @@ Signed commits provide a strong barrier against numerous security concerns, incl
 The use of signed contributions builds trust between team members and external contributors. When contributors notice that commits are signed, they can be confident that the modifications are valid and originated from reputable sources. This trust is critical for ensuring a secure and collaborative development environment, particularly in open-source projects.
 
 In summary, signing contributions using SSH keys has numerous advantages, including verifying the integrity and validity of code modifications, encouraging accountability, improving security, and fostering trust among contributors. By implementing commit signing standards, development teams can protect their projects from numerous risks while maintaining a high level of code quality.
+
+### solved task 1
