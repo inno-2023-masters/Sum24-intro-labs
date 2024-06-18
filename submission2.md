@@ -4,7 +4,7 @@
 
 ![Peers](/images/peers.png)
 
-![IPFS Status](/images/ipfs.png)
+![IPFS Status](/images/details.png)
 
 * IPFS hash: `QmVRZFhyPAaX1mynWBQKGxYiRF1V3mGnVLVocE9pXDXPuW`
 * URL: https://ipfs.io/ipfs/QmVRZFhyPAaX1mynWBQKGxYiRF1V3mGnVLVocE9pXDXPuW
