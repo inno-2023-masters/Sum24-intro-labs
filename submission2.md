@@ -10,6 +10,14 @@
 
 ![Bandwidth](bandwidth.png)
 
-Hash: `QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD`
+**IPFS Hash**: `QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD`
 
-URL: [https://ipfs.io/ipfs/QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD?filename=screenshot.png](https://ipfs.io/ipfs/QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD?filename=screenshot.png)
+**IPFS URL**: [https://ipfs.io/ipfs/QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD?filename=screenshot.png](https://ipfs.io/ipfs/QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD?filename=screenshot.png)
+
+## Task 2: Set Up Project on Fleek.co
+
+**IPFS Hash**: `bafybeibkjnutrrrteul3p2uvjnppk53h45v7lfpxbpzvam4vfx5zdic5mq`
+
+**IPFS URL**: [https://ipfs.io/ipfs/bafybeibkjnutrrrteul3p2uvjnppk53h45v7lfpxbpzvam4vfx5zdic5mq](https://ipfs.io/ipfs/bafybeibkjnutrrrteul3p2uvjnppk53h45v7lfpxbpzvam4vfx5zdic5mq)
+
+**Deploy URL** [https://acoustic-zoo-teeny.on-fleek.app](https://acoustic-zoo-teeny.on-fleek.app)
