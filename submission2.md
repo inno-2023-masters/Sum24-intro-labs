@@ -13,4 +13,4 @@
 
 * IPFS hash: `QmaZYaXcwhevEghM5uwNcab54KSyt97qEMDaWcDjE3kWhe`
 * IPFS URL: https://ipfs.io/ipfs/QmaZYaXcwhevEghM5uwNcab54KSyt97qEMDaWcDjE3kWhe/
-* Fleek Domain: https://ipfs.io/ipfs/QmaZYaXcwhevEghM5uwNcab54KSyt97qEMDaWcDjE3kWhe/
+* Fleek Domain: https://crimson-forest-9359.on.fleek.co/
