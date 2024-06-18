@@ -15,5 +15,5 @@ Bandwidth over time
 * Url: [IPFS.io Gateway](https://ipfs.io/ipfs/QmQtqDnmEHMXdHR12vSFhRM4azGHMiJ3wgnomnsrCghGFf)
 
 ## Task 2.
-[Domain on-fleek:](https://scarce-army-faint.on-fleek.app/)
-[IPFS.io Gateway:](https://ipfs.io/ipfs/bafybeiemh62uxfe2ihc5evzswtovpnugh5eh2j6oqlrebpz7yjqch6zfp4/)
+* [Domain on-fleek:](https://scarce-army-faint.on-fleek.app/)
+* [IPFS.io Gateway:](https://ipfs.io/ipfs/bafybeiemh62uxfe2ihc5evzswtovpnugh5eh2j6oqlrebpz7yjqch6zfp4/)
