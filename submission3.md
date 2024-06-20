@@ -134,7 +134,7 @@ nothing to commit, working tree clean
 
 Reference: [git reset documentation](https://git-scm.com/docs/git-reset)
 
-```git reset [--soft | --hard] HEAD~1``` command resets the current branch head to HEAD~1 and possibly updates the index (resetting it to the tree of HEAD~1) and the working tree depending on the mode:
+```git reset [--soft | --hard] HEAD~1``` command resets the current branch head to HEAD~1 and possibly updates the index and the working tree depending on the mode:
 ________________________________
 
 * ```--soft``` undoes the last commit, retaining the changes made. 
