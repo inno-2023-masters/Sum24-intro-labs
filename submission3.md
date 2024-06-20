@@ -71,7 +71,7 @@ $ echo "First commit" > file.txt
 $ git add file.txt 
 $ git commit -m "First commit"
 
-[git-reset-practice 68bcbf6] First commit
+[git-reset-practice cce6d10] First commit
  1 file changed, 1 insertion(+)
  create mode 100644 file.txt
 ```
@@ -80,7 +80,7 @@ $ echo "Second commit" >> file.txt
 $ git add file.txt 
 $ git commit -m "Second commit"
 
-[git-reset-practice e2fb067] Second commit
+[git-reset-practice d96d514] Second commit
  1 file changed, 1 insertion(+)
 
 ```
@@ -89,9 +89,56 @@ $ echo "Third commit" >> file.txt
 $ git add file.txt 
 $ git commit -m "Third commit"
 
-[git-reset-practice e817840] Third commit
+[git-reset-practice d96d514] Third commit
+ 1 file changed, 1 insertion(+)
+
+```
+* Inspect the log of the last commit prior to resetting:
+```
+$ git log -1
+commit a81c6651500b925e8311f2a03d7fe9ed866dec14 (HEAD -> git-reset-practice)
+Author: Elizaveta Kovanova <e.kovanov@innopolis.university>
+Date:   Thu Jun 20 16:14:41 2024 +0300
+
+    Third commit
+
+```
+
+* Attempt to make a commit after a soft reset:
+```
+$ git reset --soft HEAD~1
+$ git log -1
+commit d96d51456840dc10f9f0e0abb396eb68aff5707b (HEAD -> git-reset-practice)
+Author: Elizaveta Kovanova <e.kovanov@innopolis.university>
+Date:   Thu Jun 20 16:14:21 2024 +0300
+
+    Second commit
+
+$ git commit -m "commit attempt after soft reset"
+[git-reset-practice 5095ce6] commit attempt after soft reset
  1 file changed, 1 insertion(+)
 
 ```
 
+* Attempt to make a commit after a hard reset:
+```
+$ git reset --hard HEAD~1
+HEAD is now at d96d514 Second commit
+$ git commit -m "commit attempt after hard reset"
+On branch git-reset-practice
+nothing to commit, working tree clean
+
+```
+
 ### Reset and reflog process
+
+Reference: [git reset documentation](https://git-scm.com/docs/git-reset)
+
+```git reset [--soft | --hard] HEAD~1``` command resets the current branch head to HEAD~1 and possibly updates the index (resetting it to the tree of HEAD~1) and the working tree depending on the mode:
+________________________________
+
+* ```--soft``` undoes the last commit, retaining the changes made. 
+
+* ```--hard``` resets the index and working tree. Any changes to tracked files in the working tree since HEAD~1 are discarded. Any untracked files or directories in the way of writing any tracked files are simply deleted.
+
+* To compare the two modes I attempted to make a commit after each command - indeed I could re-perform a commit after a soft reset, unlike the hard reset.
