@@ -62,3 +62,36 @@ $ git cat-file -p cc510bdf575297a13cfb6a509601de1fb800bee0
 ```
 
 ## Task 2
+
+### Steps taken in Git reset operations and command outputs
+
+* Series of commits and their respective outputs:
+```
+$ echo "First commit" > file.txt
+$ git add file.txt 
+$ git commit -m "First commit"
+
+[git-reset-practice 68bcbf6] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+```
+```
+$ echo "Second commit" >> file.txt
+$ git add file.txt 
+$ git commit -m "Second commit"
+
+[git-reset-practice e2fb067] Second commit
+ 1 file changed, 1 insertion(+)
+
+```
+```
+$ echo "Third commit" >> file.txt
+$ git add file.txt 
+$ git commit -m "Third commit"
+
+[git-reset-practice e817840] Third commit
+ 1 file changed, 1 insertion(+)
+
+```
+
+### Reset and reflog process
