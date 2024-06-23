@@ -15,28 +15,36 @@ In this lab, you will explore software distribution strategies and best practice
      ```
 
 2. **Generate the Package Index**:
-   - Use `dpkg-scanpackages` to create a `Packages.gz` file.
+   - Use `dpkg-scanpackages` to create a `Packages` file. Compress this file into a `Packages.gz` archive.
 
      ```sh
-     dpkg-scanpackages ~/local-apt-repo | gzip -c > ~/local-apt-repo/Packages.gz
+     dpkg-scanpackages ~/local-apt-repo /dev/null | gzip -9c > ~/local-apt-repo/Packages.gz
      ```
 
 3. **Add the Local Repository to Your Sources List**:
    - Add the repository to your `sources.list`.
 
      ```sh
-     echo "deb [trusted=yes] file:/home/yourusername/local-apt-repo ./" | sudo tee -a /etc/apt/sources.list
+     echo "deb [trusted=yes] file:/home/yourusername/local-apt-repo ./" | sudo tee /etc/apt/sources.list.d/local-apt-repo.list
      sudo apt update
      ```
 
-4. **Install a Package from the Local Repository**:
+4. **Verify the Contents of the Packages.gz File:**:
+   - Check that the Packages.gz file contains the correct paths and metadata for your .deb files, **it must be relative path like `./your_package.deb`**. Also you can see the package name there. Then check the repository of your package, make sure it's local one.
+
+     ```sh
+     zcat Packages.gz
+     apt policy your-package-name
+     ```
+
+5. **Install a Package from the Local Repository**:
    - Install a package using `apt` from your local repository.
 
      ```sh
      sudo apt install your-package-name
      ```
 
-5. **Documentation**:
+6. **Document the Process**:
    - Create a `submission4.md` file.
    - Provide step-by-step documentation of your setup and installation process in the `submission4.md` file.
 
