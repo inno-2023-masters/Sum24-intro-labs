@@ -59,3 +59,113 @@ Result:
 
 ### Task 1. Understanding Version Control Systems.
 ```
+### Task 2.
+
+#### Part 1. Create commits.
+1. Create branch:
+```sh
+$ git checkout -b git-reset-practice
+```
+Result:
+```sh
+Switched to a new branch 'git-reset-practice'
+```
+
+2. Create first commit:
+```sh
+$ echo "First commit" > file.txt
+$ git add file.txt
+$ git commit -m "First commit"
+```
+Result:
+```sh
+[git-reset-practice 8232ddd] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+ ```
+
+3. Create second commit:
+```sh   
+$ echo "Second commit" >> file.txt
+$ git add file.txt
+$ git commit -m "Second commit"
+```
+Result:
+```sh
+[git-reset-practice 56e05ed] Second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+4. Create third commit:
+```sh
+$ echo "Third commit" >> file.txt
+$ git add file.txt
+$ git commit -m "Third commit"
+```
+Result:
+```sh
+[git-reset-practice 5f9be81] Third commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+#### Part 2. GIT Reset.
+1. Run **soft** reset:
+```sh
+$ git reset --soft HEAD~1
+$ git log
+```
+Result:
+```sh
+commit 56e05ed70308e8d9046f69f719221fc15d2456b8 (HEAD -> git-reset-practice)
+Author: Anton <albugg2001@gmail.com>
+Date:   Mon Jun 24 22:25:25 2024 +0300
+
+    Second commit
+
+commit 8232dddf8e1bc858ca93d40f137ab34884a58799
+Author: Anton <albugg2001@gmail.com>
+Date:   Mon Jun 24 22:25:03 2024 +0300
+
+    First commit
+```
+2. Run **hard** reset:
+```sh
+$ git reset --hard HEAD~1
+```
+Result:
+```sh
+HEAD is now at 8232ddd First commit
+``` 
+
+#### Part 3. Recover after reset.
+1. Run
+```sh
+$ git reflog
+```
+Result:
+```sh
+8232ddd (HEAD -> git-reset-practice) HEAD@{0}: reset: moving to HEAD~1
+56e05ed HEAD@{1}: reset: moving to HEAD~1
+5f9be81 HEAD@{2}: commit: Third commit
+56e05ed HEAD@{3}: commit: Second commit
+8232ddd (HEAD -> git-reset-practice) HEAD@{4}: commit: First commit
+d0a3fce (origin/lab3_solution, lab3_solution) HEAD@{5}: checkout: moving from lab3_solution to git-reset-practice
+```
+2. Recover after hard reset:
+```sh
+$  git reset --hard 5f9be81
+```
+Result:
+```sh
+HEAD is now at 5f9be81 Third commit
+```
+
+#### Part 4. Reset and reflog processes explained.
+`git reset` allows to undo the commits and revert changes:
+
+- `git reset --soft` cleans commits history but keeps files unchanged;
+
+- `git reset --hard` cleans commits and reverts files to their state at reset commit.
+
+`git reflog` shows all local changes at the branches. Such history allows to, for example, undo `git reset`.
+
