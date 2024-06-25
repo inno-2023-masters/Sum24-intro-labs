@@ -66,3 +66,14 @@ sudo apt install discord
 - [reference 1](./apt-repository-1.png)
 - [reference 2](./apt-repository-2.png)
 - [reference 3](./apt-repository-3.png)
+
+## Task 2: Simulate Package Installation and Identify Dependencies
+
+**Dependencies:**
+The current discord package depends on the following packages (with their versions)
+
+- libayatana-indicator7 (0.9.3-1 Debian:12.5/stable [amd64])
+- libdbusmenu-gtk4 (18.10.20180917~bzr492+repack1-3 Debian:12.5/stable [amd64])
+- libayatana-appindicator1 (0.5.92-1 Debian:12.5/stable [amd64])
+
+[reference 1](./simulate.png)
