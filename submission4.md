@@ -48,7 +48,7 @@ sudo apt update
 
 ### Verify the Contents of the `Packages.gz` File
 
-- Check that the Packages.gz file contains the correct path and metadata for your `discord.deb` file, **it must be relative path like `./discord.deb`**. Also you can see the package name there. Then check the repository of your package, make sure it's local one.
+- Check that the Packages.gz file contains the correct path and ### metadata for your `discord.deb` filit must be relative path li`./discord.deb`\*\*. Also you can see the package name there. Then check the repository of your package, make sure it's local one.
 
 ```sh
 zcat Packages.gz
@@ -69,11 +69,48 @@ sudo apt install discord
 
 ## Task 2: Simulate Package Installation and Identify Dependencies
 
-**Dependencies:**
-The current discord package depends on the following packages (with their versions)
+**Dependencies:** The current discord package depends on the following packages (with their versions)
 
 - libayatana-indicator7 (0.9.3-1 Debian:12.5/stable [amd64])
 - libdbusmenu-gtk4 (18.10.20180917~bzr492+repack1-3 Debian:12.5/stable [amd64])
 - libayatana-appindicator1 (0.5.92-1 Debian:12.5/stable [amd64])
 
 [reference 1](./simulate.png)
+
+## Task 3: Hold and Unhold `discord`
+
+**Objective**: Prevent `discord` package from being upgraded and then allow it to be upgraded again.
+
+### Install the `discord` package
+
+- Install `discord` package from your local repository
+
+```sh
+sudo apt install discord
+```
+
+### Hold the Package
+
+- Use `apt-mark` to hold the package.
+
+```sh
+sudo apt-mark hold discord
+```
+
+### Verify the Hold Status
+
+- Check the status of held packages.
+
+```sh
+apt-mark showhold
+```
+
+### Unhold the Package
+
+- Use `apt-mark` to unhold the package.
+
+```sh
+sudo apt-mark unhold discord
+```
+
+[reference 1](./hold-package.png)
