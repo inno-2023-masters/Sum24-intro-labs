@@ -144,3 +144,66 @@ $ dpkg -s google-chrome-stable
 Package: google-chrome-stable
 Status: deinstall ok config-files
 ```
+
+### Task 3. Hold and Unhold Package Versions.
+
+1. Install package:
+```sh
+$ sudo apt install google-chrome-stable
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  python3-cliapp python3-markdown python3-packaging python3-ttystatus
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  google-chrome-stable
+0 upgraded, 1 newly installed, 0 to remove and 48 not upgraded.
+Need to get 109 MB of archives.
+After this operation, 348 MB of additional disk space will be used.
+Get:1 https://dl.google.com/linux/chrome/deb stable/main amd64 google-chrome-stable amd64 126.0.6478.126-1 [109 MB]
+Fetched 109 MB in 11s (9 975 kB/s)                                             
+Selecting previously unselected package google-chrome-stable.
+(Reading database ... 374917 files and directories currently installed.)
+Preparing to unpack .../google-chrome-stable_126.0.6478.126-1_amd64.deb ...
+Unpacking google-chrome-stable (126.0.6478.126-1) ...
+Setting up google-chrome-stable (126.0.6478.126-1) ...
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/x-w
+ww-browser (x-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/gno
+me-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/goo
+gle-chrome (google-chrome) in auto mode
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+```
+
+2. Hold the package:
+```sh
+$ sudo apt-mark hold google-chrome-stable
+
+google-chrome-stable set on hold.
+```
+
+3. Verify the Hold Status:
+```sh
+$ apt-mark showhold
+
+google-chrome-stable
+```
+
+4. Unhold the Package:
+```sh
+$ sudo apt-mark unhold google-chrome-stable
+
+Canceled hold on google-chrome-stable.
+```
+
+5. Check Hold Status adter Unhold:
+```sh
+$ apt-mark showhold
+$ <nothing>
+```
