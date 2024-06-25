@@ -48,3 +48,28 @@ git cat-file -p 5738bc15a0416
 ```
 
 
+## Task 2
+
+### Simulate three commits
+
+![alt text](/screens/commits3.png)
+
+### Two Soft Resets
+Accidently I made soft reset on one commit two times. Result is file sttay the same and contains text "Third commit", so command just moves the position of the HEAD without touching stage area.
+
+![alt text](/screens/2softreset.png)
+
+### One Hard Reset
+Since i have spend two previous commits, I made hard reset on commit when "file.txt" file was not created. I didn't screen explorer, but as evidence I leave screen of git log, which says that I was on commit after completing Task 1 of this lab. Hard reset in difference with soft reset, do not just moves HEAD pointer but also deletes passed commits, which reflects on working area. In my case "file.txt" disapeared, because at the moment of completing of the first task it didn't exist.
+
+![alt text](/screens/1hardreset.png)
+
+### Reflog
+Git redflog shows journal of actions made, reset command too.
+
+![alt text](/screens/reflog.png)
+
+
+### Reset reseted three commits
+Reset command pointing to reflog hash, returns changes made after this. In my case, I have hard reseted my previous 2 soft and 1 hard reset. And come back to working stage with "file.txt" with text "Third commit".
+![alt text](/screens/fileHealed.png)
