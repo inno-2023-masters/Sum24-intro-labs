@@ -45,3 +45,66 @@ PS A:\Project\devops-labs\Sum24-intro-labs> git cat-file -p 37b67809f46a68cbe58e
 
 # Even more text
 ```
+
+## Task 2: Practice with Git Reset Command
+
+- ``Git reset --soft``: Moves the HEAD pointer to the specified commit without altering the index or the working directory. The changes from the discarded commits are still staged, allowing to commit them again if needed.
+- ``git reset --hard``: This option moves the HEAD pointer to the specified commit, discards all changes since the target commit, and updates the working directory and the index. Any changes not yet committed will be lost.
+- ``git reflog``: Tracks the history of all operations performed on the repository, including commits, resets, and merges.
+
+1. 
+```
+PS A:\Project\devops-labs\Sum24-intro-labs> echo "First commit" > file.txt
+PS A:\Project\devops-labs\Sum24-intro-labs> git commit -m "First commit"
+Enter passphrase:
+[git-reset-practice 8732f9c] First commit
+
+PS A:\Project\devops-labs\Sum24-intro-labs> echo "Second commit" >> file.txt
+PS A:\Project\devops-labs\Sum24-intro-labs> git add file.txt
+PS A:\Project\devops-labs\Sum24-intro-labs> git commit -m "Second commit"
+Enter passphrase:
+
+PS A:\Project\devops-labs\Sum24-intro-labs> echo "Third commit" >> file.txt
+PS A:\Project\devops-labs\Sum24-intro-labs> git commit -m "Third commit"
+Enter passphrase:
+[git-reset-practice 0abb795] Third commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ ```
+2. 
+ ```
+PS A:\Project\devops-labs\Sum24-intro-labs> git reset --soft HEAD~1
+PS A:\Project\devops-labs\Sum24-intro-labs> git reset --hard HEAD~1
+HEAD is now at 8732f9c First commit
+```
+3. 
+```
+PS A:\Project\devops-labs\Sum24-intro-labs> git reflog
+d98f736 HEAD@{1}: reset: moving to HEAD~1
+d98f736 HEAD@{3}: commit: Second commit
+705a843 (lab-3-kolokolov-dmitriy) HEAD@{5}: checkout: moving from lab-3-kolokolov-dmitriy to git-reset-practice
+705a843 (lab-3-kolokolov-dmitriy) HEAD@{6}: commit: Task 1 completed
+3bd17ee HEAD@{7}: commit: Commit №3
+```
+4. 
+```
+PS A:\Project\devops-labs\Sum24-intro-labs> git reset --hard 0abb795      
+HEAD is now at 0abb795 Third commit
+
+PS A:\Project\devops-labs\Sum24-intro-labs> git reset --hard d98f736
+HEAD is now at d98f736 Second commit
+
+PS A:\Project\devops-labs\Sum24-intro-labs> git reset --hard 0abb795
+HEAD is now at 0abb795 Third commit
+```
+7. 
+```
+PS A:\Project\devops-labs\Sum24-intro-labs> git reflog
+0abb795 (HEAD -> git-reset-practice) HEAD@{0}: reset: moving to 0abb795
+d98f736 HEAD@{1}: reset: moving to d98f736
+0abb795 (HEAD -> git-reset-practice) HEAD@{2}: reset: moving to 0abb795
+8732f9c HEAD@{3}: reset: moving to HEAD~1
+d98f736 HEAD@{4}: reset: moving to HEAD~1
+0abb795 (HEAD -> git-reset-practice) HEAD@{5}: commit: Third commit
+d98f736 HEAD@{6}: commit: Second commit
+8732f9c HEAD@{7}: commit: First commit
+```
