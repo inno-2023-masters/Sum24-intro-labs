@@ -96,3 +96,51 @@ Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
 Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
 ```
+
+### Task 2. Simulate Package Installation and Identify Dependencies.
+
+1. Check package info
+```sh
+$ apt-cache showpkg google-chrome-stable 
+
+Package: google-chrome-stable
+Versions: 
+126.0.6478.126-1 (/var/lib/apt/lists/dl.google.com_linux_chrome_deb_dists_stable_main_binary-amd64_Packages) (/var/lib/apt/lists/_home_anton_local-apt-repo_._Packages) (/var/lib/dpkg/status)
+ Description Language: 
+                 File: /var/lib/apt/lists/dl.google.com_linux_chrome_deb_dists_stable_main_binary-amd64_Packages
+                  MD5: a2d34067fc33f1c87253c33b9fd975f0
+
+
+Reverse Depends: 
+Dependencies: 
+126.0.6478.126-1 - dpkg (2 1.14.0) ca-certificates (0 (null)) fonts-liberation (0 (null)) libasound2 (2 1.0.17) libatk-bridge2.0-0 (2 2.5.3) libatk1.0-0 (2 2.2.0) libatspi2.0-0 (2 2.9.90) libc6 (2 2.17) libcairo2 (2 1.6.0) libcups2 (2 1.6.0) libcurl3-gnutls (16 (null)) libcurl3-nss (16 (null)) libcurl4 (16 (null)) libcurl3 (0 (null)) libdbus-1-3 (2 1.9.14) libdrm2 (2 2.4.75) libexpat1 (2 2.1~beta3) libgbm1 (2 17.1.0~rc2) libglib2.0-0 (2 2.39.4) libgtk-3-0 (18 3.9.10) libgtk-4-1 (0 (null)) libnspr4 (2 2:4.9-2~) libnss3 (2 2:3.35) libpango-1.0-0 (2 1.14.0) libu2f-udev (0 (null)) libvulkan1 (0 (null)) libx11-6 (2 2:1.4.99.1) libxcb1 (2 1.9.2) libxcomposite1 (2 1:0.4.4-1) libxdamage1 (2 1:1.1) libxext6 (0 (null)) libxfixes3 (0 (null)) libxkbcommon0 (2 0.5.0) libxrandr2 (0 (null)) wget (0 (null)) xdg-utils (2 1.0.2) 
+Provides: 
+126.0.6478.126-1 - www-browser (= ) 
+Reverse Provides: 
+```
+Here we can see what dependencies the package has and what it provides.
+
+2. Simulate installation
+```sh
+$ sudo apt install -s google-chrome-stable
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  python3-cliapp python3-markdown python3-packaging python3-ttystatus
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  google-chrome-stable
+0 upgraded, 1 newly installed, 0 to remove and 48 not upgraded.
+Inst google-chrome-stable (126.0.6478.126-1 Google:1.0/stable, localhost [amd64])
+Conf google-chrome-stable (126.0.6478.126-1 Google:1.0/stable, localhost [amd64])
+```
+
+Package was not indeed installed:
+```sh
+$ dpkg -s google-chrome-stable 
+
+Package: google-chrome-stable
+Status: deinstall ok config-files
+```
