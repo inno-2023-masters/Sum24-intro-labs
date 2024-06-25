@@ -91,3 +91,131 @@ gpgsig -----BEGIN SSH SIGNATURE-----
 add test dir
 ```
 ## Task 2: Practice with Git Reset Command
+
+- Checking out to git-reset-practice
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (master)
+$ git checkout git-reset-practice
+Switched to a new branch 'git-reset-practice'
+branch 'git-reset-practice' set up to track 'origin/git-reset-practice'.
+
+```
+- Making three commits
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ echo "First commit" > file.txt
+git add file.txt
+git commit -m "First commit"
+
+echo "Second commit" >> file.txt
+git add file.txt
+git commit -m "Second commit"
+
+echo "Third commit" >> file.txt
+git add file.txt
+git commit -m "Third commit"
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[git-reset-practice 06c6b10] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[git-reset-practice f262d94] Second commit
+ 1 file changed, 1 insertion(+)
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+[git-reset-practice 9b164bc] Third commit
+ 1 file changed, 1 insertion(+)
+
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git status
+On branch git-reset-practice
+Your branch is ahead of 'origin/git-reset-practice' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+```
+
+- Using ```git reset --soft HEAD~1``` removes the last commit from the current branch, but the file changes will stay in the working tree. In addition the changes will remain on the index.
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git reset --soft HEAD~1
+
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git status
+On branch git-reset-practice
+Your branch is ahead of 'origin/git-reset-practice' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+```
+- Checking the contents of the file shows that the working tree remains unchanged.
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ cat file.txt
+First commit
+Second commit
+Third commit
+```
+- Using ```git reset --soft HEAD~1``` will remove all uncommited changes and all untracked files as well as the changes introduced in the last commit. The changes won't stay the your working tree
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git reset --hard HEAD~1
+HEAD is now at 06c6b10 First commit
+
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git status
+On branch git-reset-practice
+Your branch is ahead of 'origin/git-reset-practice' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+- The last commit after the soft reset was second commit, after running a hard reset this commit is removed and only first commit remains. The working tree has also been cleard
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ ls
+file.txt  index.html  lab1.md  lab2.md  lab3.md  lab4.md  lab5.md  lab6.md  README.md
+
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ cat file.txt
+First commit
+
+```
+- git reflog shows the history of modifications made to the repository's HEAD pointer.
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git reflog
+06c6b10 (HEAD -> git-reset-practice) HEAD@{0}: reset: moving to HEAD~1
+f262d94 HEAD@{1}: reset: moving to HEAD~1
+9b164bc HEAD@{2}: commit: Third commit
+f262d94 HEAD@{3}: commit: Second commit
+06c6b10 (HEAD -> git-reset-practice) HEAD@{4}: commit: First commit
+73e47a9 (origin/master, origin/git-reset-practice, origin/HEAD, master) HEAD@{5}: checkout: moving from master to git-reset-practice
+
+```
+- Running ```git reset --hard ``` with the commit hash reverts the changes back to this commit.
+```
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git reset --hard 9b164bc
+HEAD is now at 9b164bc Third commit
+
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ git status
+On branch git-reset-practice
+Your branch is ahead of 'origin/git-reset-practice' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
+$ cat file.txt
+First commit
+Second commit
+Third commit
+```
+
+
+
