@@ -39,3 +39,35 @@ f2beb2e2dd720595e0d77cd80a9
 100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391    submission3.md
 
 ```
+# Task 2: Practice with Git Reset Command
+
+## Creating a New Branch
+```sh
+# Commands executed
+git checkout -b git-reset-practice
+```
+
+## Created some commits
+
+## Performing Soft Reset
+```sh
+# Commands executed
+git reset --soft HEAD~1
+```
+## Performing Hard Reset
+```sh
+# Commands executed
+git reset --hard HEAD~1
+```
+## Recovering Commits using Reflog
+```sh
+# Commands executed
+git reflog
+git reset --hard e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+```
+## Explanation of Reset and Reflog Process
+
+- **Soft Reset**: Moves the HEAD pointer to the specified commit but leaves the index and working directory unchanged.
+- **Hard Reset**: Moves the HEAD pointer to the specified commit and resets the index and working directory to match that commit.
+- **Reflog**: Keeps a log of where the HEAD has been, allowing recovery of commits that might otherwise be lost after a reset.
+
