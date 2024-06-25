@@ -2,7 +2,7 @@
 
 ## Task 1: Understanding Version Control Systems
 
-- Adding a new directory and file to the repository.
+#### Adding a new directory and file to the repository.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (lab_three)
 $ mkdir testFolder
@@ -55,7 +55,7 @@ To github.com:Suwi-inc/Sum24-intro-labs.git
    73e47a9..7b69c0a  lab_three -> lab_three
 
 ```
--  Inspecting the contents of blobs, trees, and commits.
+####  Inspecting the contents of blobs, trees, and commits.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (lab_three)
 $ git rev-parse HEAD:testFolder/test.txt
@@ -92,7 +92,7 @@ add test dir
 ```
 ## Task 2: Practice with Git Reset Command
 
-- Checking out to git-reset-practice
+#### Checking out to git-reset-practice.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (master)
 $ git checkout git-reset-practice
@@ -100,7 +100,7 @@ Switched to a new branch 'git-reset-practice'
 branch 'git-reset-practice' set up to track 'origin/git-reset-practice'.
 
 ```
-- Making three commits
+#### Making three commits.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ echo "First commit" > file.txt
@@ -135,7 +135,7 @@ nothing to commit, working tree clean
 
 ```
 
-- Using ```git reset --soft HEAD~1``` removes the last commit from the current branch, but the file changes will stay in the working tree. In addition the changes will remain on the index.
+#### Using ```git reset --soft HEAD~1``` removes the last commit from the current branch, but the file changes will stay in the working tree. In addition the changes will remain on the index.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ git reset --soft HEAD~1
@@ -151,7 +151,7 @@ Changes to be committed:
         modified:   file.txt
 
 ```
-- Checking the contents of the file shows that the working tree remains unchanged.
+#### Checking the contents of the file shows that the working tree remains unchanged.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ cat file.txt
@@ -159,7 +159,7 @@ First commit
 Second commit
 Third commit
 ```
-- Using ```git reset --soft HEAD~1``` will remove all uncommited changes and all untracked files as well as the changes introduced in the last commit. The changes won't stay the your working tree
+#### Using ```git reset --soft HEAD~1``` will remove all uncommited changes and all untracked files as well as the changes introduced in the last commit. The changes won't stay the your working tree.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ git reset --hard HEAD~1
@@ -173,7 +173,7 @@ Your branch is ahead of 'origin/git-reset-practice' by 1 commit.
 
 nothing to commit, working tree clean
 ```
-- The last commit after the soft reset was second commit, after running a hard reset this commit is removed and only first commit remains. The working tree has also been cleard
+#### The last commit after the soft reset was second commit, after running a hard reset this commit is removed and only first commit remains. The working tree has also been cleard.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ ls
@@ -184,7 +184,7 @@ $ cat file.txt
 First commit
 
 ```
-- git reflog shows the history of modifications made to the repository's HEAD pointer.
+#### git reflog shows the history of modifications made to the repository's HEAD pointer.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ git reflog
@@ -196,7 +196,7 @@ f262d94 HEAD@{3}: commit: Second commit
 73e47a9 (origin/master, origin/git-reset-practice, origin/HEAD, master) HEAD@{5}: checkout: moving from master to git-reset-practice
 
 ```
-- Running ```git reset --hard ``` with the commit hash reverts the changes back to this commit.
+#### Running ```git reset --hard ``` with the commit hash reverts the changes back to this commit.
 ```
 suwil@SUWILANJI-PCV3 MINGW64 ~/Desktop/First Year Masters/Third Semester/Devops/Lab 1/Sum24-intro-labs (git-reset-practice)
 $ git reset --hard 9b164bc
