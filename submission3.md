@@ -1,4 +1,6 @@
 ## Lab 3 report
+Kirill Glinskiy k.glinsky@innopolis.university
+TG: @amrtized
 ### Task 1
 First, i've made some comits in lab3 branch and pushed them to the origin.
 
