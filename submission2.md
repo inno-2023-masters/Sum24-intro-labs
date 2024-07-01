@@ -23,4 +23,4 @@ Everything was set up correctly, but at some point the domain started dropping t
 
 Here is my Fleek project:
 
-![Fleek-project](/Fleek-project.png)
+![Fleek-project](/Fleek-project.png) 
