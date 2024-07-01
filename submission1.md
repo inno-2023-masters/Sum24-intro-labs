@@ -30,4 +30,4 @@
 - Cons: Rewriting history can lead to potential conflicts, might cause confusion if used incorrectly, and can be more complex for new users.
 
 ### Why Standard Merge is often preferred in collaborative environments:
-Standard merge is often preferred in collaborative environments because it preserves the entire history of changes made by individual contributors. This transparency helps in tracking down issues, understanding the evolution of the codebase, and giving proper credit to each contributor. It also simplifies the process for new team members to understand the project's history and facilitates easier collaboration among team members.
+Standard merge is often preferred in collaborative environments because it preserves the entire history of changes made by individual contributors. This transparency helps in tracking down issues, understanding the evolution of the codebase, and giving proper credit to each contributor. It also simplifies the process for new team members to understand the project's history and facilitates easier collaboration among team members. 
