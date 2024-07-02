@@ -2,7 +2,7 @@
 
 ## Task 1: Understanding Version Control Systems
 
-![git cat image](git-cat.png)
+![git cat image](./assets/git-cat.png)
 
 ## Task 2: Practice with Git Reset Command
 
@@ -11,8 +11,8 @@
 - `git reset --soft HEAD~1` will undo the previous commit and restore the changes to the staging area
 - `git reset --hard HEAD~1` will undo the previous commit and delete the changes
 
-![commits steps](commits.png)
+![commits steps](./assets/commits.png)
 
 ### Git reflog
 
-![reference logs](reflog.png)
+![reference logs](./assets/reflog.png)

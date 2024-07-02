@@ -8,7 +8,7 @@ Top 3 processes based on cpu usage
 - jetbrains rider
 - free download manager
 
-![CPU Reference](./cpu-reference.png)
+![CPU Reference](./assets/cpu-reference.png)
 
 Top 3 processes based on RAM usage
 
@@ -16,7 +16,7 @@ Top 3 processes based on RAM usage
 - jetbrains rider
 - jetbrains rider
 
-![RAM Reference](./mem-reference.png)
+![RAM Reference](./assets/mem-reference.png)
 
 Top 3 processes based on IO usage
 
@@ -24,8 +24,12 @@ Top 3 processes based on IO usage
 - pipewire
 - wireplumber
 
-![RAM Reference](./io-reference.png)
+![RAM Reference](./assets/io-reference.png)
 
 Top 3 largest files in /var directory
 
-![size-reference](./size-reference.png)
+![size-reference](./assets/size-reference.png)
+
+## Task 2: Terraform Installation and Nginx Deployment
+
+Faced lots of issues with terraform setup both from hashicorp and yandex cloud so I gave up 🥲

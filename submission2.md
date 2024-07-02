@@ -4,11 +4,11 @@
 
 ### Connected peers
 
-![Connected peers](peers.png)
+![Connected peers](./assets/peers.png)
 
 ### Bandwidth
 
-![Bandwidth](bandwidth.png)
+![Bandwidth](./assets/bandwidth.png)
 
 **IPFS Hash**: `QmUGwaqGmcc4hTzyVP4XY5uaYFjCpnjjtVw5Asc3P9xpnD`
 
