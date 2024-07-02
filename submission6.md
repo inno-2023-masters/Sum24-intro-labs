@@ -79,6 +79,7 @@ traceroute to innopolis.university (213.159.212.4), 64 hops max
  10   *  *  * 
  11   213.159.212.4  21.365ms !*  18.682ms !*  21.178ms !* 
  ```
+ Here we can see the path and time the data takes to reach the destination.
 
 2. Perform DNS lookup for `innopolis.university`:
 ```sh
@@ -103,3 +104,4 @@ innopolis.university.	448	IN	A	213.159.212.4
 ;; WHEN: Tue Jul 02 18:46:56 MSK 2024
 ;; MSG SIZE  rcvd: 65
 ```
+Here we can see more detailed information about query and received answer from domain name.
