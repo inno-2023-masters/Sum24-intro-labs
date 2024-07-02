@@ -62,7 +62,7 @@ anton    tty2     tty2             15:20    1:46m  0.04s  0.04s /usr/libexec/gno
 From this output we can understand how many users are currently logged in.
 
 ### Task 2. Networking Analysis.
-1. 
+1. Perform tracerout for `innopolis.university`:
 ```sh
 $ traceroute innopolis.university
 
@@ -80,7 +80,7 @@ traceroute to innopolis.university (213.159.212.4), 64 hops max
  11   213.159.212.4  21.365ms !*  18.682ms !*  21.178ms !* 
  ```
 
-2. 
+2. Perform DNS lookup for `innopolis.university`:
 ```sh
 $ dig innopolis.university
 
