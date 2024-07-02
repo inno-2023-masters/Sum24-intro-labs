@@ -60,3 +60,46 @@ anton    tty2     tty2             15:20    1:46m  0.04s  0.04s /usr/libexec/gno
 ```
 
 From this output we can understand how many users are currently logged in.
+
+### Task 2. Networking Analysis.
+1. 
+```sh
+$ traceroute innopolis.university
+
+traceroute to innopolis.university (213.159.212.4), 64 hops max
+  1   192.168.0.1  6.765ms  4.640ms  2.075ms 
+  2   10.16.255.135  10.048ms  3.004ms  3.091ms 
+  3   10.16.248.213  6.775ms  7.115ms  6.191ms 
+  4   10.16.248.150  3.460ms  3.194ms  4.024ms 
+  5   10.16.248.189  4.074ms  4.732ms  7.624ms 
+  6   195.208.211.53  17.359ms  17.176ms  17.277ms 
+  7   195.208.211.53  19.934ms  18.009ms  17.956ms 
+  8   139.45.243.3  30.777ms  36.251ms  34.103ms 
+  9   *  *  * 
+ 10   *  *  * 
+ 11   213.159.212.4  21.365ms !*  18.682ms !*  21.178ms !* 
+ ```
+
+2. 
+```sh
+$ dig innopolis.university
+
+; <<>> DiG 9.18.24-0ubuntu0.22.04.1-Ubuntu <<>> innopolis.university
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38928
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;innopolis.university.		IN	A
+
+;; ANSWER SECTION:
+innopolis.university.	448	IN	A	213.159.212.4
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Tue Jul 02 18:46:56 MSK 2024
+;; MSG SIZE  rcvd: 65
+```
