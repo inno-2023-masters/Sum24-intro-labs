@@ -1,5 +1,9 @@
 ### Task 2. Terraform Installation and Nginx Deployment.
 
+1. Installation process:
+    1. Download archive from [official website](https://developer.hashicorp.com/terraform/install?product_intent=terraform).
+    2. Unarchive and install file.
+
 1. Check Terraform version
 ```sh
 $ terraform -v
@@ -36,7 +40,7 @@ resource "docker_container" "nginx" {
   }
 }
 ```
-2. Initialize terraform: 
+2. Initialize terraform (with VPN): 
 ```sh
 $ terraform init
 
@@ -146,6 +150,9 @@ docker_container.nginx: Creation complete after 1s [id=6c9207b372ca133f8de72276f
 
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
+
+3. Open Nginx:
+![Nginx](../images/nginx.png)
 
 4. Modify `main.tf` file, chnage external port from `8000` to `8080`:
 ```
