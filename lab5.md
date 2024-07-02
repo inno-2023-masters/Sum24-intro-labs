@@ -1,7 +1,7 @@
 # GitOps & SRE Lab
 
 In this lab, you will explore the principles of GitOps and Site Reliability Engineering (SRE). Follow the tasks below to complete the lab assignment.
-
+z
 ## Task 1: Key Metrics for SRE and SLAs
 
 **Objective**: Monitor system resources and manage disk space.
