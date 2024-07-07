@@ -169,3 +169,5 @@ HEAD is now at 5f9be81 Third commit
 
 `git reflog` shows all local changes at the branches. Such history allows to, for example, undo `git reset`.
 
+
+
