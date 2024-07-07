@@ -30,3 +30,4 @@ Commit signing is neccessary to verify that the person who is really working on 
 #### Conclusion
 
 Concluding we can say that **Standard Merge** may be the best option compared to others mainly because this method stores the whole history of changes of all branches that may be crucial since in case of some conflicts developers will be able to trace back the error and fix it.
+
