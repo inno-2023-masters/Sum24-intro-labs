@@ -43,7 +43,5 @@ aslan@aslan-X756UXM:~$ docker rm 98674570c98e
 
 aslan@aslan-X756UXM:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-
 ```
 
-# Task 2
