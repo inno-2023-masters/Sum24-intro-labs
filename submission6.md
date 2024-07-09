@@ -3,7 +3,7 @@
 ## Task 1
 Output of the provided commands:
 
-|```systemd-analyze```|``` uptime ```|``` ```|
+|```systemd-analyze```|``` uptime ```|```w ```|
 |--|--|--|
 |![boot time and slow services](screenshots/blame.png)|``` 17:32:02 up  3:01,  1 user,  load average: 0,65, 1,03, 1,56```|![w](screenshots/w.png)|
 
