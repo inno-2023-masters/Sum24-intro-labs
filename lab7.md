@@ -8,7 +8,7 @@ In this lab, you will learn how to deploy a Virtual Machine (VM) using VirtualBo
 
 1. **Install VirtualBox**:
    - Download and install VirtualBox from the official [VirtualBox website](https://www.virtualbox.org/).
-   - Provide the version number of VirtualBox in your report.
+   - Provide the version number of   in your report.
 
 2. **Deploy a Virtual Machine**:
    - Create a new Virtual Machine (VM) using VirtualBox and choose the Ubuntu operating system.
