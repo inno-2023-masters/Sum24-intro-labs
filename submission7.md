@@ -14,8 +14,8 @@
 ### 1. Processor, RAM, and Network Information:
 
 ### Processor
-![lscpu](images/Lscpu.png)
-![lscpu](images/Lscpu_2.png)
+![cpu](images/cpu.png)
+![cpu2](images/cpu_2.png)
 
 ### RAM
 ![free-h](images/free-h.png)
