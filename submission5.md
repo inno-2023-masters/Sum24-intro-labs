@@ -102,7 +102,3 @@ Top 3 Largest Files in /var Directory:
 497M	/var/lib/snapd/snaps/gnome-42-2204_141.snap
 497M	/var/lib/snapd/seed/snaps/gnome-42-2204_141.snap
 ```
-
-#### Task 2.1
-
-First, I installed the 
