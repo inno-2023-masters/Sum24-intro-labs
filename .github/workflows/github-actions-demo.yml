@@ -18,3 +18,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Gather System Information
+        run: |
+          sudo lshw -class cpu
+          sudo lshw -class memory
+          sudo lshw -class network
+          cat /etc/os-release

@@ -13,3 +13,14 @@ on:
   push:
   workflow_dispatch:
 ```
+
+2. **Gather System Information**:
+
+```
+- name: Gather System Information
+        run: |
+          sudo lshw -class cpu
+          sudo lshw -class memory
+          sudo lshw -class network
+          cat /etc/os-release
+```
