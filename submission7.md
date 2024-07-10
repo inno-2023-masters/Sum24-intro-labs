@@ -21,7 +21,9 @@
 
 Сommand-line tools to display system information of the VM:
 
-|                |Processor| RAM | Network| OS Specs |
-|----------------|--|--|--|--|
-|command-line    |```lscpu```| ```free -m```|```ifconfig```|```hostnamectl```|shut
-|output          |![cpu](screenshots/cpu.png)|![ram](screenshots/ram.png)| ![net](screenshots/net.png) | ![os](screenshots/os.png)
+| | command-line  | output|
+|-|---------------|-------|
+|Processor| ```lscpu```| ![cpu](screenshots/cpu.png)|
+|RAM |  ```free -m```| |![ram](screenshots/ram.png)|
+| Network| ```ifconfig```|![net](screenshots/net.png) |
+|   OS Specs | ```hostnamectl```| ![os](screenshots/os.png)|
