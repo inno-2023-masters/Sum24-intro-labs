@@ -24,6 +24,6 @@
 | | command-line  | output|
 |-|---------------|-------|
 |Processor| ```lscpu```| ![cpu](screenshots/cpu.png)|
-|RAM |  ```free -m```| |![ram](screenshots/ram.png)|
+|RAM |  ```free -m```| ![ram](screenshots/ram.png)|
 | Network| ```ifconfig```|![net](screenshots/net.png) |
 |   OS Specs | ```hostnamectl```| ![os](screenshots/os.png)|
