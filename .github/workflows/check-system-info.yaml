@@ -1,0 +1,16 @@
+name: Gather System Info via GitHub Actions
+run-name: ${{ github.actor }} is checking the system via GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "OS release"
+      - run: cat /etc/os-release
+
+      - run: echo "Architecture"
+      - run: lscpu
+
+      - run: echo "RAM"
+      - run: free -m
+
