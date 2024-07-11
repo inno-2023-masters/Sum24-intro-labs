@@ -17,4 +17,31 @@ VirtualBox Version number: 7.0.18 [ref](./assets/virtualbox-version.png)
 - Select `Try or Install Ubuntu` in the menu [ref](./assets/virtualbox-grub.png)
 - Follow the [official instruction](https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup) from step 5 to step 12
 
+**Ubuntu running**  
 ![Ubuntu running](./assets/virtualbox-ubuntu-running.png)
+
+## Task 2: System Information Tools
+
+### CPU Information
+
+- **Tool**: lscpu
+- **Command**: lscpu  
+  ![CPU Information](./assets/virtualbox-cpu-info.jpg)
+
+### RAM Information
+
+- **Tool**: free
+- **Command**: free -h  
+  ![RAM Information](./assets/virtualbox-ram-info.jpg)
+
+### Network Information
+
+- **Tool**: net-tools
+- **Command**: ifconfig  
+  ![Network Information](./assets/virtualbox-net-info.jpg)
+
+### OS Information
+
+- **Tool**: neofetch
+- **Command**: neofetch  
+  ![Network Information](./assets/virtualbox-os-info.jpg)
