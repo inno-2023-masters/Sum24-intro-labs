@@ -33,3 +33,37 @@ jobs:
 
 4. If we commit and push changes it would automatically trigger new github action, for example, this time I commited folder `images` with 1 image inside and we can see that in GitHub Action #2 we get updated list of directories:
 ![](images/action2.png)
+
+### Task 2: Gathering System Information and Manual Triggering.
+
+1. To enable manual trigger we can create new file `manual-triggering.yaml`:
+```yaml
+name: Manual GitHub Actions
+run-name: ${{ github.actor }} is testing out Manual GitHub Actions 🚀
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was MANUALLY triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+```
+
+2. Commit and push newly created file to the `lab9_solution` branch.
+
+3. Create and merge pull request from `lab9_solution` to `master` branch. Now we can see new kind of action in *Actions* tab and run them manually
+![](images/manual_action1.png)
+This action basically gives the same result but we triggered it manually:
+![](images/manual_action2.png)
