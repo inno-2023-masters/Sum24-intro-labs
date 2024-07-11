@@ -36,14 +36,13 @@ jobs:
 
 ### Task 2: Gathering System Information and Manual Triggering.
 
+>1. Manual trigger
 1. To enable manual trigger we can create new file `manual-triggering.yaml`:
 ```yaml
 name: Manual GitHub Actions
 run-name: ${{ github.actor }} is testing out Manual GitHub Actions 🚀
-
 on:
   workflow_dispatch:
-
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -67,3 +66,27 @@ jobs:
 ![](images/manual_action1.png)
 This action basically gives the same result but we triggered it manually:
 ![](images/manual_action2.png)
+
+
+>2. Gather System Information
+
+To gather runner information we can simply create new `check-system-info.yaml` file in `.github/workflows` directory:
+```yaml
+name: Gather System Info via GitHub Actions
+run-name: ${{ github.actor }} is checking the system via GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "OS release"
+      - run: cat /etc/os-release
+
+      - run: echo "Architecture"
+      - run: lscpu
+
+      - run: echo "RAM"
+      - run: free -m
+```
+In this file we can add terminal commands that will run when GitHub action is triggered, for example, `cat /etc/os-release` to check system info and `lscpu` to check architecture. If we open **Actions** tab and select corresponding Action we can see the output of those commands. Output contains information about runner system:
+![](images/runner_info.png)
