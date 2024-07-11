@@ -136,4 +136,4 @@ neofetch
 
 ## Screenshot of Running VM
 
-![Screenshot of Running VM](images/runningVM.png)
+![Screenshot of Running VM](./images/runningVM.png)
