@@ -13,7 +13,7 @@ In this lab, you will gain hands-on experience with Docker, a popular containeri
      docker ps -a
      ```
 
-   - Document the command used and provide the output in a Markdown file named `ContainerList.md` in the lab folder.
+   - Document the command used and provide the output in a Markdown file named `submission8.md` in the lab folder.
 
 2. **Pull Latest Ubuntu Image**:
    - Use the appropriate command to pull the latest Ubuntu image from the Docker registry.
@@ -22,7 +22,7 @@ In this lab, you will gain hands-on experience with Docker, a popular containeri
      docker pull ubuntu:latest
      ```
 
-   - Document the command used in the same `ContainerList.md` file.
+   - Document the command used in the same `submission8.md` file.
 
 3. **Run Container**:
    - Use the appropriate command to run a container using the Ubuntu image you just pulled.
@@ -31,7 +31,7 @@ In this lab, you will gain hands-on experience with Docker, a popular containeri
      docker run -it --name ubuntu_container ubuntu:latest
      ```
 
-   - Document the command used and any relevant details about the container in the same `ContainerList.md` file.
+   - Document the command used and any relevant details about the container in the same `submission8.md` file.
 
 4. **Remove Image**:
    - Attempt to remove the Ubuntu image you pulled earlier.
@@ -40,7 +40,7 @@ In this lab, you will gain hands-on experience with Docker, a popular containeri
      docker rmi ubuntu:latest
      ```
 
-   - Document the command used and the outcome of the removal process in the same `ContainerList.md` file.
+   - Document the command used and the outcome of the removal process in the same `submission8.md` file.
 
 ## Task 2: Image and Container Operations
 
@@ -53,8 +53,8 @@ In this lab, you will gain hands-on experience with Docker, a popular containeri
      docker save -o ubuntu_image.tar ubuntu:latest
      ```
 
-   - Document the commands used in a Markdown file named `ImageArchive.md` in the lab folder.
-   - Compare the size of the archive file with the size of the original image. Explain any differences, if present, in the same `ImageArchive.md` file.
+   - Document the commands used in a Markdown file named `submission8.md` in the lab folder.
+   - Compare the size of the archive file with the size of the original image. Explain any differences, if present, in the same `submission8.md` file.
 
 2. **Run Nginx Container**:
    - Use the appropriate command to run a container using the Nginx web server image:
@@ -123,7 +123,7 @@ In this lab, you will gain hands-on experience with Docker, a popular containeri
      docker diff my_website_container
      ```
 
-   - Explain the output of the `docker diff` command in the `ImageArchive.md` file.
+   - Explain the output of the `docker diff` command in the `submission8.md` file.
 
 ### Guidelines
 

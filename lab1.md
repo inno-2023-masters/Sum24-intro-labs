@@ -36,6 +36,7 @@ This lab assignment introduces you to Git and its essential operations. You will
      ```sh
      git config --global user.signingkey <YOUR_SSH_KEY>
      git config --global commit.gpgSign true
+     git config --global gpg.format ssh
      ```
 
 3. **Make a Signed Commit**:
