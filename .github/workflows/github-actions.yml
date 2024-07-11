@@ -1,6 +1,8 @@
 name: CI/CD configuration for lab9
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,3 +16,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Gather system information
+        run: |
+          echo "System Information:"
+          uname -a
+          lscpu
+          free -h
+          df -h
