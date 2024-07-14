@@ -21,3 +21,24 @@ Update lab4 Software Distribution
 Signed-off-by: Dmitriy Creed <creed@soramitsu.co.jp>
 ```
 
+Example with a tree hash:
+
+![image-20240714160226818](screens/tree.png)
+
+Example with a blob:
+
+![image-20240714160912455](screens/blob.png)
+
+## Task 2
+
+### Playing with commits
+
+![image-20240714161409935](screens/commits.png)
+
+### Reflog output
+
+![image-20240714161251347](screens/reflog.png)
+
+### Recovering the reset
+
+![image-20240714161540179](screens/recover.png)
