@@ -14,7 +14,7 @@
     ```
 2. Pull and run container:
     ```bash
-    docker run -d --name ipfs_host -v /path/to/folder/with/file:/export -v ipfs_data:/data/ipfs -p 8080:8080 -p 4001:4001 -p 5001:5001 ipfs/go-ipfs
+    docker run -d --name ipfs_host -v ./submitions/ipfs_export:/export -v ./submitions/ipfs_data:/data/ipfs -p 8080:8080 -p 4001:4001 -p 5001:5001 ipfs/go-ipfs
     ```
     ![alt text](1.png)
     
