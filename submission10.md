@@ -46,3 +46,33 @@
     - integrated with Azure Active Directory for security,
     - supports geo-replication for high availability,
     - automated container building and patching.
+
+#### Concluding we can say that each of these cloud providers offer robust artifact registry services with their own features and benefits that can be applied to different needs and integrations, making it easier for developers to manage and deploy their applications.
+
+### Task 2. Serverless Computing Platform Research.
+
+1. **AWS Lambda (by AWS)** allows you to run code without provisioning or managing servers. You pay only for the compute time you consume. Main features that AWS Lambda provides:
+    - automatically run code in response to events like changes to data, shifts in system state, or user actions,
+    - multiple language support such as Node.js, Python, Ruby, Java, Go, and .NET Core,
+    - simple integration with other AWS services (e.g., S3, DynamoDB, Kinesis, API Gateway),
+    - automatic scaling by running code in response to each trigger,
+    - managing of how many instances of a function can run simultaneously,
+    - integration with AWS CloudWatch for monitoring and logging.
+
+2. **Google Cloud Functions (by GCP)** is a lightweight, event-driven compute solution for developers to create single-purpose, standalone functions that respond to cloud events. Main features that Google Cloud Functions provides:
+    - triggered by various events from Google Cloud services, Firebase, and third-party services,
+    - multiple language support such as Node.js, Python, Go, Java, and .NET Core,
+    - automatically scaling up and down based on the number of incoming requests,
+    - seamles integration with Google Cloud services like Cloud Storage, Pub/Sub, Firestore, and more,
+    - integrated with Google Cloud’s operations suite (formerly Stackdriver) for monitoring and logging,
+    - integrated with Google Cloud IAM for access control.
+
+3. **Azure Functions (by Azure)** is a serverless compute service that enables you to run event-triggered code without having to explicitly provision or manage infrastructure. Main features that Azure Functions provides:
+    - can be triggered by HTTP requests, timers, events from Azure services, or third-party services,
+    - multiple language support such as C#, Java, JavaScript, Python, PowerShell, and TypeScript,
+    - automatic scaling based on demand, handling thousands of concurrent function executions,
+    - deep integration with other Azure services like Blob Storage, Cosmos DB, Event Hubs, Service Bus, and more,
+    - integrated with Azure Monitor for logging, metrics, and diagnostics,
+    - integrated with Azure Active Directory for access control and security.
+
+#### Concluding we can say that each platform provides a robust set of features for running serverless applications, catering to different programming languages, integration needs, and scaling requirements.
