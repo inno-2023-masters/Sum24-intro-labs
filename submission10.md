@@ -37,3 +37,55 @@ To identify and document the most popular artifact registries in AWS, GCP, and A
   - Integrates with Azure Pipelines for artifact management.
 
 ## Task 2
+
+To identify and document the best serverless computing platforms in AWS, GCP, and Azure, I will need to research the services offered by each cloud provider. Here is an overview of some of the popular serverless computing platforms available on AWS, Google Cloud Platform (GCP), and Microsoft Azure:
+
+### AWS (Amazon Web Services)
+1. AWS Lambda
+   - Key Features:
+     - Pay-as-you-go pricing model.
+     - Supports multiple programming languages like Node.js, Python, Java, and more.
+     - Integrates with other AWS services for event-driven architecture.
+     - Automatic scaling based on incoming traffic.
+     - Supports triggers from various sources like API Gateway, S3, DynamoDB, etc.
+
+2. Amazon API Gateway
+   - Key Features:
+     - Fully managed service to create, publish, maintain, monitor, and secure APIs.
+     - Integrates with Lambda for serverless API endpoints.
+     - Supports RESTful APIs and WebSocket APIs.
+     - Provides features like throttling, caching, and request validation.
+
+### GCP (Google Cloud Platform)
+1. Google Cloud Functions
+   - Key Features:
+     - Event-driven serverless functions.
+     - Supports multiple programming languages including Node.js, Python, Go, and more.
+     - Automatically scales based on traffic.
+     - Integrates with other GCP services like Cloud Storage, Pub/Sub, Firestore, etc.
+     - Provides a free tier for usage.
+
+2. Google Cloud Run
+   - Key Features:
+     - Serverless containers platform.
+     - Allows running stateless containers on a fully managed environment.
+     - Supports both HTTP and gRPC requests.
+     - Autoscaling based on incoming requests.
+     - Can be used with Cloud Build for continuous deployment.
+
+### Azure
+1. Azure Functions
+   - Key Features:
+     - Event-driven serverless compute service.
+     - Supports multiple programming languages such as C#, JavaScript, Python, etc.
+     - Integrates with other Azure services like Blob Storage, Event Grid, Cosmos DB, etc.
+     - Provides triggers from various sources like HTTP requests, timers, queues, etc.
+     - Supports durable functions for orchestrating workflows.
+
+2. Azure Logic Apps
+   - Key Features:
+     - Visual workflow automation platform.
+     - Allows building workflows with a drag-and-drop interface.
+     - Integrates with over 200 connectors for various services.
+     - Supports conditional logic, loops, and error handling.
+     - Provides monitoring and analytics for workflows.
