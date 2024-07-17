@@ -1,6 +1,16 @@
 # Task 1
 
-## 1
- For GitHub to discover any GitHub Actions workflows in your repository, you must save the workflow files in a directory called .github/workflows.
+### yaml configuration of workflow
 
-You can give the workflow file any name you like, but you must use .yml or .yaml as the file name extension.
+![](/screens/conf.png)
+
+### Workflow
+
+![](/screens/workflow.png)
+
+### Jobs
+
+![](/screens/jobs.png)
+
+# Task 2
+
