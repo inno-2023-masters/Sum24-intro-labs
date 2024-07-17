@@ -1,7 +1,9 @@
 name: GitHub Actions Manual
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: 
+on:
     workflow_dispatch:
+      branches:
+        - lab9
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
