@@ -56,3 +56,33 @@ jobs:
 By following these steps, I have successfully created a GitHub Actions workflow file in my repository. This workflow will be triggered on a push event and execute the defined steps.
 
 ## Task 2
+
+I set up manual triggering:
+![alt text](image-1.png)
+
+the modified yml:
+
+```yml
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_dispatch:
+jobs:
+  print-tag:
+    runs-on: ubuntu-latest
+    if:  ${{ inputs.print_tags }} 
+    steps:
+      - name: Print the input tag to STDOUT
+        run: echo  The tags are ${{ inputs.tags }} 
+```
+
+### After the modification:
+
+**Manually Trigger the Workflow Instruction**:
+   - Go to your GitHub repository where you added the GitHub Actions workflow.
+   - Click on the "Actions" tab at the top of the repository.
+   - In the left sidebar, you should see your workflow listed under "All workflows."
+   - Click on the workflow name to open it.
+   - On the top right corner, you should see a "Run workflow" button. Click on it.
+   - You will be prompted to enter any input required by your workflow, if applicable.
+   - Click the green "Run workflow" button to manually trigger the workflow.
