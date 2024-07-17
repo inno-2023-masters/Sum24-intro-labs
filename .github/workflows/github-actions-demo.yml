@@ -1,16 +1,10 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
+  push:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'The branch to build'
-        required: true
-      environment:
-        description: 'The environment to deploy to'
-        required: false
 jobs:
-  build:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -23,4 +17,4 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}." 
+      - run: echo "🍏 This job's status is ${{ job.status }}."
