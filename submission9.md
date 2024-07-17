@@ -86,3 +86,39 @@ jobs:
    - On the top right corner, you should see a "Run workflow" button. Click on it.
    - You will be prompted to enter any input required by your workflow, if applicable.
    - Click the green "Run workflow" button to manually trigger the workflow.
+
+## Gathering system information:
+
+![alt text](image-2.png)
+
+The modified yml:
+
+```yml
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥 The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Gather System Information
+        run: |
+          lscpu
+          free -h
+          df -h
+```
+
+In this updated workflow, the new step "Gather System Information" includes commands to display CPU information (lscpu), memory usage (free -h), and disk space (df -h).
