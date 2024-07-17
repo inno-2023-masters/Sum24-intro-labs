@@ -139,6 +139,9 @@ Artifacts: Perfect for DevOps users needing multiple package types. Free tier is
 - **Artifacts**: Perfect for DevOps users needing multiple package types. Free tier is generous, but additional storage isn't cheap.
 
 
+## Task 2: Serverless Computing Platform Research
+
+
 ### Serverless Computing Platforms Comparison
 
 - **AWS**
