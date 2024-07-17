@@ -14,3 +14,11 @@
 
 # Task 2
 
+
+
+```yaml
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push, workflow_dispatch]
+jobs:
+  Explore-GitHub-Actions:
+```
