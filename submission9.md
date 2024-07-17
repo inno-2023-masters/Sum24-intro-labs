@@ -14,11 +14,15 @@
 
 # Task 2
 
+### Before
 
+![](/screens/before.png)
 
+### new yaml configuration
 ```yaml
+name: GitHub Actions Manual
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push, workflow_dispatch]
+on: 
+    workflow_dispatch:
 jobs:
-  Explore-GitHub-Actions:
 ```
