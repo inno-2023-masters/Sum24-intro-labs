@@ -14,9 +14,12 @@
 
 # Task 2
 
+## Manul Triggering
+
 ### Before
 
-![](/screens/before.png)
+
+![](/screens/workflow.png)
 
 ### new yaml configuration
 ```yaml
@@ -26,3 +29,13 @@ on:
     workflow_dispatch:
 jobs:
 ```
+
+### After
+![](/screens/2workflow.png)
+![](/screens/6wf.png)
+
+## System information
+
+![](/screens/sysinfo.png)
+
+
