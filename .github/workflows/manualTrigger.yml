@@ -1,0 +1,31 @@
+name: "Workflow Manual Trigger"
+
+on: 
+  workflow_dispatch:
+    inputs:
+      author:
+       description: 'Choose author'
+       required: true
+       type: choice
+       options:
+                - admin
+                - editor
+                - contributor
+      location:
+        description: 'Choose Location'     
+        required: true
+        default: 'in'
+        options:
+                - us
+                - uk
+                - in
+
+
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Author : ${{ github.event.inputs.author }}"
+        echo "Location : ${{ github.event.inputs.location }}" 
