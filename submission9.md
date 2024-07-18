@@ -14,6 +14,15 @@ After a new push, the workflow was triggered. No error were found in the executi
 
 ## Task 2
 
+### Part 1
+
 Now we need to make the workflow manually triggerable. This is done by adding `workflow_dispatch` to the events list. However, according to the documentation "this trigger only receives events when the workflow file is on the default branch". Thus even if we pushed workflow to a non-master branch, the workflow won't be munually triggerable. Thus we need to have it in the master branch.
 
-So we should do this in the master branch.
+So we should do this in the master branch. After moving the workflow to the default branch (master), this is what we get in the actions tab. 
+
+![alt text](imgs/actions-master.png)
+
+We can now manually trigger the workflow. 
+
+![manual-trigger](imgs/manual-trigger.png)
+
