@@ -38,4 +38,6 @@ jobs:
 
 ![](/screens/sysinfo.png)
 
+![](/screens/sysinfo2.png)
+
 
