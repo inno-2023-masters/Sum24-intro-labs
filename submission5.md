@@ -14,7 +14,7 @@ Most Memory-consuming processes:
 
 Most IO consuming processes (I had to pipe the output to the `sort` command and sort by the 21st column, which corresponds to the utilization percentage in this case).
 
-![image-20240715204729873](/home/rafik/Documents/InnoUni/sum24/Sum24-intro-labs-devops/screens/io.png)
+![image-20240715204729873](screens/io.png)
 
 #### Disk space
 
