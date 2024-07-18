@@ -16,3 +16,32 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Gather Runner Information
+        run: |
+          echo "## Runner Information"
+          echo "Runner Name: $RUNNER_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner OS Version: $RUNNER_OS_VERSION"
+          echo "Runner Temp Directory: $RUNNER_TEMP"
+          echo "Runner Tool Cache: $RUNNER_TOOL_CACHE"
+          
+      - name: Gather Hardware Information
+        run: |
+          echo "## Hardware Information"
+          echo "CPU Info:"
+          lscpu
+          echo "Memory Info:"
+          free -h
+          echo "Disk Info:"
+          df -h
+          
+      - name: Gather Operating System Information
+        run: |
+          echo "## Operating System Information"
+          uname -a
+          echo "OS Release Info:"
+          cat /etc/os-release
+          echo "Kernel Version:"
+          uname -r
+          echo "Host Information:"
+          hostnamectl

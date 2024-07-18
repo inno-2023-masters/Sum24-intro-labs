@@ -26,3 +26,44 @@ We can now manually trigger the workflow.
 
 ![manual-trigger](imgs/manual-trigger.png)
 
+### Part 2
+
+Now we need to update the workflow to gather the runner information. We added the following steps to the job. We show info about the runner using env variables. We also linux commands (lscpu, free, df, etc.) for more details.
+
+```
+      - name: Gather Runner Information
+        run: |
+          echo "## Runner Information"
+          echo "Runner Name: $RUNNER_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner OS Version: $RUNNER_OS_VERSION"
+          echo "Runner Temp Directory: $RUNNER_TEMP"
+          echo "Runner Tool Cache: $RUNNER_TOOL_CACHE"
+          
+      - name: Gather Hardware Information
+        run: |
+          echo "## Hardware Information"
+          echo "CPU Info:"
+          lscpu
+          echo "Memory Info:"
+          free -h
+          echo "Disk Info:"
+          df -h
+          
+      - name: Gather Operating System Information
+        run: |
+          echo "## Operating System Information"
+          uname -a
+          echo "OS Release Info:"
+          cat /etc/os-release
+          echo "Kernel Version:"
+          uname -r
+          echo "Host Information:"
+          hostnamectl
+```
+
+The output can be found here:
+
+![info](imgs/info1.png)
+
+![info](imgs/info2.png)
