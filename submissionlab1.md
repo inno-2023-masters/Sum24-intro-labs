@@ -1,0 +1,4 @@
+Standard Merge: Combines two branches by creating a merge commit, preserving the history of both branches.
+    Squash and Merge: Combines all commits from a feature branch into a single commit before merging, resulting in a cleaner, more concise commit history.
+    Rebase and Merge: Reapplies commits from a feature branch onto the base branch, creating a linear project history but potentially complicating collaborative workflows.
+    Summary: The standard merge strategy is often preferred in collaborative environments because it preserves the complete history of both branches, facilitating easier debugging and understanding of the project's evolution. Squash and Merge create a clean history but can obscure the development process, while Rebase and Merge offer a linear history but can be complex and risky if not handled carefully. Refer to the GitHub Docs on Merging and Atlassian Git Tutorials for detailed explanations and best practices.
