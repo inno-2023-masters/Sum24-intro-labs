@@ -8,3 +8,5 @@ Workflow summary - 2
 ![Workflow summary - 2](./assets/gh-actions-workflow-2.png)
 
 ## Task 2: Gathering System Information and Manual Triggering
+
+![Manual trigger](./assets/gh-actions-manual-trigger.png)
