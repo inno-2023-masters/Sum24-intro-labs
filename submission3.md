@@ -54,6 +54,46 @@ git reflog
 git reset --hard 5998213
 ```
 
+```
+git reflog
+reflog_hash=$(git reflog | grep "First commit" | awk '{print $1}')
+git reset --hard $reflog_hash
+5998213 (HEAD -> git-reset-practice) HEAD@{0}: reset: moving to HEAD~1
+e734315 HEAD@{1}: reset: moving to HEAD~1
+a33227a HEAD@{2}: commit: Third commit
+e734315 HEAD@{3}: commit: Second commit
+5998213 (HEAD -> git-reset-practice) HEAD@{4}: commit: First commit
+ff170a7 (lab3) HEAD@{5}: checkout: moving from lab3 to git-reset-practice
+ff170a7 (lab3) HEAD@{6}: commit: Third commit
+05e887e HEAD@{7}: commit: Second commit
+a4022b8 HEAD@{8}: commit: Initial commit
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{9}: checkout: moving from lab1 to lab3
+df8fa38 (origin/lab1, lab1) HEAD@{10}: commit: lab1
+914082f HEAD@{11}: commit: lab1
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{12}: checkout: moving from master to lab1
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{13}: checkout: moving from lab4 to master
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{14}: checkout: moving from lab7 to lab4
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{15}: checkout: moving from master to lab7
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{16}: checkout: moving from lab6 to master
+c63508f (origin/lab6, lab6) HEAD@{17}: checkout: moving from master to lab6
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{18}: checkout: moving from lab5 to master
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{19}: checkout: moving from lab5 to lab5
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{20}: checkout: moving from master to lab5
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{21}: checkout: moving from lab5 to master
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{22}: checkout: moving from master to lab5
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{23}: checkout: moving from lab5 to master
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{24}: checkout: moving from master to lab5
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{25}: checkout: moving from lab8 to master
+8537b45 (origin/lab8, lab8) HEAD@{26}: commit: lab8
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{27}: checkout: moving from master to lab8
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{28}: checkout: moving from lab6 to master
+c63508f (origin/lab6, lab6) HEAD@{29}: commit: lab6
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{30}: checkout: moving from master to lab6
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{31}: checkout: moving from lab3 to master
+b8ca852 (origin/master, origin/HEAD, master, lab7, lab5, lab4) HEAD@{32}: checkout: moving from master to lab3
+HEAD is now at 5998213 First commit
+```
+
 ## Examples and Outputs
 ```
 Reflog Hash: 5998213
