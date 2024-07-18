@@ -4,5 +4,7 @@ Github actions is a platform for CI/CD. We can manage builds, tests, deployments
 
 To add a new workflow, we just needs to create a new folder `.github/workflows` and add workflow file there. The workflow is jsut a yaml file that specifies what jobs need to executed. In the quick start, we created `github-actions-demo.yml` that contains a single job. This job has multiple steps: it echos the repository's name, user, and the files in the github.
 
+The workflow worked as expected without any errors.
 
+![demo action](imgs/image.png)
 
