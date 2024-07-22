@@ -1,18 +1,26 @@
 name: Checking formatting
-on: [push, workflow_dispatch]
+
+on:
+  push:
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-22.04
+
     steps:
       - uses: actions/checkout@v3
+      
       - name: Set up Python 3
         uses: actions/setup-python@v4
         with:
           python-version: "3.11.1"
+      
       - name: Install black
         run: |
           python -m pip install --upgrade pip
           pip install black
+      
       - name: Check formatting with black
         run: |
           black --check .
