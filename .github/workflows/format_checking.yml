@@ -1,8 +1,6 @@
 name: Checking formatting
 
-on:
-  push:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -24,3 +22,21 @@ jobs:
       - name: Check formatting with black
         run: |
           black --check .
+      
+      - name: Gather system information
+        run: |
+          echo "## System Information" > system-info.txt
+          echo "### Runner Info" >> system-info.txt
+          echo "- Name: $RUNNER_NAME" >> system-info.txt
+          echo "- OS: $RUNNER_OS" >> system-info.txt
+          echo "- OS Version: $RUNNER_OS_VERSION" >> system-info.txt
+          echo "- Architecture: $RUNNER_ARCH" >> system-info.txt
+          echo "" >> system-info.txt
+          
+          echo "### Hardware Info" >> system-info.txt
+          echo "- CPU: $(lscpu | grep 'Model name' | awk -F: '{print $2}')" >> system-info.txt
+          echo "- CPU Cores: $(lscpu | grep '^CPU(s):' | awk -F: '{print $2}')" >> system-info.txt
+          echo "- Memory: $(free -h | grep 'Mem:' | awk '{print $2}')" >> system-info.txt
+          echo "- Disk Space: $(df -h / | grep '/' | awk '{print $4}')" >> system-info.txt
+          
+          cat system-info.txt
