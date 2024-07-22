@@ -1,5 +1,5 @@
 name: Checking formatting
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-22.04
