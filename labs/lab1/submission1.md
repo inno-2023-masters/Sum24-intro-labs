@@ -37,7 +37,8 @@ Pros:
 
 Cons:
 
-- Possibility to rewrite changes made earli
+- Possibility to rewrite changes made earlier
+- Harder conflict resolution
 
 
-![alt text](1.png)
+![](1.png)
