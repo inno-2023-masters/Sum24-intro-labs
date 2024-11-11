@@ -1,0 +1,25 @@
+
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on: [ push, workflow_dispatch ]
+
+jobs:
+  Job:
+    runs-on: ubuntu-latest
+    env:
+      SYS_METRICS: metrics.txt
+    steps:
+      - name: Collect metrics
+        run: | 
+          printf "CPU Info\n\n" >> $SYS_METRICS 
+          cat /proc/cpuinfo >> $SYS_METRICS
+          printf "Memory Info\n\n" >> $SYS_METRICS
+          cat /proc/meminfo >> $SYS_METRICS
+          printf "OS Info\n\n" >> $SYS_METRICS
+          cat /etc/os-release >> $SYS_METRICS
+      - name: Subbmit metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: system_metrcis_report
+          path: ${{ env.SYS_METRICS }}
