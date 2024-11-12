@@ -1,6 +1,7 @@
 name: System Information Workflow
 
 on:
+  push:
   workflow_dispatch:  # This enables manual triggering from the GitHub Actions tab
 
 jobs:
