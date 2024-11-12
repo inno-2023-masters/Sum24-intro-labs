@@ -1,0 +1,21 @@
+name: System Information Workflow
+
+on:
+  push:
+  workflow_dispatch:  # This enables manual triggering from the GitHub Actions tab
+
+jobs:
+  gather-system-info:
+    runs-on: ubuntu-latest  # Specifies the runner environment
+
+    steps:
+      - name: Display Runner Information
+        run: |
+          echo "Gathering system information..."
+          echo "Operating System: $(uname -a)"
+          echo "CPU Info:"
+          lscpu
+          echo "Memory Info:"
+          free -h
+          echo "Disk Usage:"
+          df -h
