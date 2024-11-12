@@ -87,7 +87,7 @@ In this lab, you will learn about version control systems and their importance i
      git commit -m "Third commit"
      ```
 
-      ![image](../images/lab3_1.png)
+      ![image](lab3_1.png)
       P.s.: style used by me could be found [here](https://stackoverflow.com/a/9074343)
 
    - Use `git reset --hard` and `git reset --soft` to navigate the commit history.
@@ -95,12 +95,12 @@ In this lab, you will learn about version control systems and their importance i
      ```sh
      git reset --soft HEAD~1
      ```
-     ![image](../images/lab3_2.png)
+     ![image](lab3_2.png)
      ```sh
      git reset --hard HEAD~1
      ```
      
-     ![image](../images/lab3_1.png)
+     ![image](lab3_1.png)
 
    - Use `git reflog` to recover commits after a reset.
 
@@ -122,7 +122,7 @@ In this lab, you will learn about version control systems and their importance i
      git reset --hard <reflog_hash>
      ```
      
-     ![image](../images/lab3_4.png)
+     ![image](lab3_4.png)
 
 3. **Documentation**:
 

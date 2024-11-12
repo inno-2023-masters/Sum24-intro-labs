@@ -49,13 +49,13 @@ In this lab, you will explore essential DevOps tools and set up a project on the
    
    
    Worked only on local for some reason.  
-   ![image](../images/lab2_3.png)
+   ![image](lab2_3.png)
 
 3. **Documentation**:
    - Create a `submission2.md` file.
    - Share information about connected peers and bandwidth in your report.  
-   ![image](../images/lab2_1.png)  
-   ![image](../images/lab2_2.png)
+   ![image](lab2_1.png)  
+   ![image](lab2_2.png)
    - Provide the hash and the URLs used to verify the file on the IPFS gateways.  
    QmYgf7rbovaD3DK9cK3WzDwD1S4EyM4jj5efYLtr7BQuhs   
    http://bafybeiezwtzmzm6cj7ylsoq6matuo5l7gnns7qqcrbucmmnfwvlbv6wvji.ipfs.localhost:8080/  
@@ -76,7 +76,7 @@ In this lab, you will explore essential DevOps tools and set up a project on the
    - Use your fork of the Labs repository as your project source. Optionally, set up your own website (notify us in advance).
    - Configure the project settings on Fleek.
    - Deploy the Labs repository to Fleek, ensuring it is uploaded to IPFS.
-   ![image](../images/lab2_4.png)
+   ![image](lab2_4.png)
 
 3. **Documentation**:
    - Share the IPFS link and domain of the deployed project in the `submission2.md` file.  
