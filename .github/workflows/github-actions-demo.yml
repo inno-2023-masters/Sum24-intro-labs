@@ -18,7 +18,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
       - name: Gather System Information
-      - run: |
+        run: |
           echo "System Information"
           echo "Runner Info"
           echo "Name: $RUNNER_NAME"
