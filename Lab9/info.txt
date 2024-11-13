@@ -1,0 +1,30 @@
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.5 LTS
+Release:	22.04
+Codename:	jammy
+H/W path    Device    Class          Description
+================================================
+                      system         Computer
+/0                    bus            Motherboard
+/0/0                  memory         16GiB System memory
+/0/1                  processor      AMD EPYC 7763 64-Core Processor
+/0/100                bridge         440BX/ZX/DX - 82443BX/ZX/DX Host bridge (AGP disabled)
+/0/100/7              bridge         82371AB/EB/MB PIIX4 ISA
+/0/100/7/0            system         PnP device PNP0b00
+/0/100/7/1            input          PnP device PNP0303
+/0/100/7/2            input          PnP device PNP0f03
+/0/100/7/3            communication  PnP device PNP0501
+/0/100/7/4            communication  PnP device PNP0501
+/0/100/7/5            storage        PnP device PNP0700
+/0/100/7/6            system         PnP device PNP0c02
+/0/100/7/7            system         PnP device PNP0c02
+/0/100/7/8            system         PnP device PNP0c01
+/0/100/7.1            storage        82371AB/EB/MB PIIX4 IDE
+/0/100/7.3            bridge         82371AB/EB/MB PIIX4 ACPI
+/0/100/8              display        Hyper-V virtual VGA
+/1          /dev/fb0  display        hyperv_drmdrmfb
+/2          input0    input          Power Button
+/3          input1    input          AT Translated Set 2 keyboard
+/4          input3    input          AT Translated Set 2 keyboard
+/5          input4    input          Microsoft Vmbus HID-compliant Mouse
+/6          eth0      network        Ethernet interface

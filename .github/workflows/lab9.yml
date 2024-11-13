@@ -1,0 +1,14 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [workflow_dispatch]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Collect information about the runner."
+        run: touch info.txt && lsb_release -a >> info.txt && lshw -short -sanitize >> info.txt
+      - name: "Upload artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: System Information
+          path: info.txt
